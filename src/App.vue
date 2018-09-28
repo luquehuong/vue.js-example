@@ -1,11 +1,10 @@
 <template>
   <div>
     <todo-list v-bind:todos="todos"></todo-list>
-    <create-todo v-on:add-todo="addTodo"></create-todo>
+    <create-todo v-on:create-todo="createTodo"></create-todo>
   </div>
 </template>
-import TodoList from './components/TodoList'
-import CreateTodo from './components/CreateTodo'
+
 
 <script>
 import TodoList from "./components/TodoList";
@@ -40,23 +39,9 @@ export default {
     };
   },
   methods: {
-    addTodo(title) {
-      this.todos.push({
-        title,
-        done: false
-      });
+    createTodo(newTodo) {
+      this.todos.push(newTodo);
     }
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

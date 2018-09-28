@@ -20,7 +20,7 @@
       <div class="ui form">
         <div class="field">
           <label>Title</label>
-          <input type="text" v-model="todo.tile">
+          <input type="text" v-model="todo.title">
         </div>
         <div class="field">
           <label>Project</label>
@@ -36,7 +36,7 @@
     <div class="ui bottom attached green basic button" v-show="!isEditing &&todo.done" disabled>
       Completed
     </div>
-    <div class="ui bottom attached red basic button" v-show="!isEditing &&!todo.done">
+    <div class="ui bottom attached red basic button" v-on:click="completeTodo(todo)" v-show="!isEditing &&!todo.done">
       Pending
     </div>
   </div>
