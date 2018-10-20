@@ -1,6 +1,6 @@
-# todo-app
+# To-do app
 
-> A Vue.js project
+> A Vue.js project that keeps track of your to-do tasks, incluces CRUD and checks if the tasks is pending or completed.
 
 ## Build Setup
 
